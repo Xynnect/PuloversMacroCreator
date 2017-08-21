@@ -11170,6 +11170,10 @@ return
 Gosub, OSPlay
 return
 
+^F6::
+MsgBox, f
+return
+
 OSPlay:
 ; MsgBox, k
 GoSub, OSHK
