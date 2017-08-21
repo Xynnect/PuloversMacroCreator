@@ -1,0 +1,34 @@
+[OPTIONS]
+Auto Index=Yes
+Binary Index=No
+Compatibility=1.1 or later
+Compiled file=MacroCreator_Help.chm
+Contents file=MacroCreator_Help.hhc
+Default Font=Arial,8,0
+Default Window=GlavniWintype
+Default topic=index.html
+Display compile progress=Yes
+Full-text search=Yes
+Index file=MacroCreator_Help.hhk
+Language=0x409 English (United States)
+Title=Pulover's Macro Creator Help
+
+[WINDOWS]
+GlavniWintype="Pulover's Macro Creator Help","MacroCreator_Help.hhc","MacroCreator_Help.hhk","index.html","index.html",,,,,0x63520,,0x200e,[200,0,1080,700],,,,,,,0
+
+
+[FILES]
+index.html
+Tutorial.html
+Faq.html
+Main.html
+Record.html
+Playback.html
+Commands.html
+Variables.html
+Functions.html
+Export.html
+Preview.html
+Settings.html
+About.html
+License.html

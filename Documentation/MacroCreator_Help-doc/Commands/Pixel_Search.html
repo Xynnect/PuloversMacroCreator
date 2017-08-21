@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Pixel Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Pixel Search</h1>
+<p>Searches a region of the screen for a pixel color.</p>
+
+<pre class="Syntax">Pixel Search (F7)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Start X/Y / End X/Y</dt>
+  <dd>Defines the Search area of the screen/window.</dd>
+  <dt>Color Picker</dt>
+  <dd>Opens the Color Picker Tool. Point the mouse to the desired location and Right-Click to get the pixel code (in RGB format).</dd>
+  <dt>ColorID</dt>
+  <dd>The decimal or hexadecimal color ID to search for, in Blue-Green-Red (BGR) format. This field accepts <a href="../Variables.html">Variables &amp; Expressions</a>.</dd>
+  <dt>Search</dt>
+  <dd>Opens the Windows Color Pick dialog to select a pixel color.</dd>
+  <dt>If found</dt>
+  <dd>Selects an action to execute when an image/pixel is found.<br/>
+To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.</dd>
+  <dt>If not found / Error</dt>
+  <dd>Selects an action to execute when an image/pixel is not found or if the command finds an error.<br/>
+To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Not Found' option in the If Statements window.</dd>
+  <dt>Add "If Statement"</dt>
+  <dd>Automatically adds an <em>If Image/Pixel Found</em> statement below the command. You may select a range of rows to be wrapped by the statement block.</dd>
+  <dt>Preview</dt>
+  <dd>Previews the selected pixel to search.</dd>
+  <dt>Variables</dt>
+  <dd>Names of the Output variables where to store the X and Y coordinates when found.</dd>
+  <dt>Adjust coordinates to the center of the image</dt>
+  <dd>Check this option to automatically correct the coordinates in the output variables to the center of the image, instead of the upper-left corner.</dd>
+  <dt>Coord</dt>
+  <dd>Sets coordinate mode for the search to be relative to either the active window or the screen.</dd>
+  <dt>Variations</dt>
+  <dd>Specify for n a number between 0 and 255 (inclusive) to indicate the allowed number of shades of variation in either direction for the intensity of the red, green, and blue components of each pixel's color.</dd>
+  <dt>Fast</dt>
+  <dd>Uses a faster searching method that in most cases dramatically reduces the amount of CPU time used by the search.</dd>
+  <dt>RGB</dt>
+  <dd>Causes ColorID to be interpreted as an RGB value instead of BGR. This option affects the Color Picker Tool but the retrieved color will be reversed in preview and Color Pick Dialog.</dd>
+  <dt>Repeat until</dt>
+  <dd>Loops the command until the image is found or not found, according to the option selected.<br/>
+When this option is checked you can use the Repeat counter to define the maximum number of times to search. If Repeat is 1, it will loop indefinitely until the image is found/not found or the user stops execution. And if it's a number higher than 1 or a variable, it will loop until the image is found/not found but no more than that number.</dd>
+</dl>
+<h3>Remarks</h3>
+<p>You may use the variables %FoundX% and %FoundY% (or the ones defined by you) in other commands like Mouse Move &amp; Click when the image/pixel is found. To save the values to a different variable or increment the values, use the <a href="Commands\../Variables.html">Variables</a> window.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/PixelSearch.htm" target="_blank">PixelSearch</a></p>
+
+</body>
+</html>

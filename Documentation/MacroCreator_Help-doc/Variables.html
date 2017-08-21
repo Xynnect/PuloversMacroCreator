@@ -1,0 +1,129 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Variables &amp; Arrays/Objects</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1 id="variables-&amp;-arrays/objects">Variables &amp; Arrays/Objects</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#using-variables">Using Variables</a></li>
+<li><a href="#assigning-variables">Assigning Variables</a></li>
+<li><a href="#expressions">Expressions</a></li>
+<li><a href="#comparing-variables">Comparing Variables</a></li>
+<li><a href="#assigning-and-retrieving-arrays">Assigning And Retrieving Arrays</a></li>
+<li><a href="#built-in-variables">Built-in Variables</a></li>
+<li><a href="#expressions-in-command-parameters">Expressions in command parameters</a></li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>Variables are used to hold data. Whether it's a text, number or any other, you can assign a value to a variable and use it with commands and functions. Most commands and functions will output a value as the result of its operation into a variable of your choice, for example the OutputVar of the <code>Random</code> command will be used to hold the randomly gererated number.</p>
+<pre class="NoIndent">Random, Rand, 10, 50 <em>; The Rand variable will have a number between 10 and 50 after the command executes.</em></pre>
+<p>You can use this variable inside another command by enclosing it in percent signs.</p>
+<pre class="NoIndent">Click, 300, %Rand% Left, 1 <em>; The Y coordinate will be a random number.</em></pre>
+<p>To use a variable inside a function parameter or expression, do not enclose it in percent signs.</p>
+<pre class="NoIndent">MyVar := &quot;AutoHotkey&quot;
+HK := SubStr(MyVar, 6)</pre>
+<p>A detailed explanation about Variables can be found at the <a href="http://autohotkey.com/docs/Variables.htm" target="_blank">AHK documentation</a>.</p>
+<h3 id="remarks">Remarks</h3>
+<p><strong>Pulover's Macro Creator</strong> is written in AutoHotkey language, and so it has internal variables in the same environment as user-defined variables. Therefore if you choose a variable name that's used by internally by PMC you may run into inconsistencies and even crash the program.<br/>
+PMC will warn you with a traytip if it notices you are using some of its reserved words, but it's impossible to monitor every single situation where and variable to avoid such conflicts, so it's recommended to follow these guidelines when choosing a variable name:</p>
+<ul>
+<li>Do not use very short words, such as &quot;a&quot; or &quot;vr&quot;. Use variable names that are at least 3 characters long.</li>
+<li>Do not use variable names starting with numbers or symbols like &quot;_&quot; or &quot;$&quot;.</li>
+<li>Avoid commonly used words like &quot;var&quot;, &quot;par&quot;, &quot;func&quot;, etc.</li>
+</ul>
+<h2 id="using-variables">Using Variables</h2>
+<p>Any single word enclosed in percent signs (e.g. <code>%MyVar%</code>) inside a string will be converted to the variable's contents during playback. That means you can use variables in <code>Text</code> or <code>MsgBox</code> and other commands. For example you can copy a text and send it using <code>ControlSend</code> or <code>ControlSetText</code> directly from the clipboard.</p>
+<pre class="NoIndent">Today is %A_DDDD% and it's %A_Hour%:%A_Min%.
+Clipboard's contents are: %Clipboard%</pre>
+<p>Download Example: <a href="Examples/Variables.pmc">Using Variables inside Command Parameters</a></p>
+<h2 id="assigning-variables">Assigning Variables</h2>
+<p>Most commands and functions outputs variables with the result of its operation. You can also create and modify variables in the <strong>Variables</strong> window. Type a valid variable name, select one of the operators and input a value.</p>
+<pre class="NoIndent">MyVar := &quot;Some Text&quot;
+Counter += 1
+NewVar := MyVar &quot; and some text.&quot;</pre>
+<p><strong>Note</strong>: This is the correct syntax in AHK, but if you don't have the <em>Expression</em> option checked you can enter values without quotes and use percent signs for variables, e.g.: %MyVar% and some text, and it will be converted for preview and export.</p>
+<h2 id="expressions">Expressions</h2>
+<p>Expressions are used to perform one or more operations upon a series of variables, literal strings, and/or literal numbers. With expressions you can execute math operations, functions, assignments and object calls.</p>
+<p>In PMC you can execute expressions in the following ways:</p>
+<ul>
+<li>Entering them in the Expression Window. You can enter multiple expressions separated by lines or commas.</li>
+</ul>
+<pre class="NoIndent">ie := ComObjCreate(&quot;InternetExplorer.Application&quot;), ie.Visible := true, ie.Navigate(&quot;macrocreator.com&quot;) <em>; This would create an InternetExplorer COM object and navigate to &quot;macrocreator.com&quot;</em></pre>
+<ul>
+<li>Checking the option <em>Expression</em> in the Variables Window.</li>
+</ul>
+<pre class="NoIndent">MyVar := 30 * 100 / 200 <em>; This would assign 15 to MyVar</em>
+MyVar := Number + 100 <em>; This would assign the value from variable Number + 100 to MyVar</em></pre>
+<ul>
+<li>Forcing expression in a command parameter by preceding it with a <code>%</code> and one or more spaces.</li>
+</ul>
+<pre class="NoIndent">% StrLen(&quot;Some string&quot;) <em>; This would show 11 in a command parameter</em></pre>
+<p>In expressions variables must not be enclosed in percent signs (except to deference) and literal strings must be enclosed in quotes. A complete explanation can be found at <a href="http://autohotkey.com/docs/Variables.htm#Expressions" target="_blank">AHK documentation</a>.</p>
+<h3 id="remarks">Remarks</h3>
+<p>Since version 5.0.0, AutoHotkey Expression format must be used for Function parameters and COM expressions.</p>
+<p>PMC files from previous versions are automatically converted, however there might be errors in the converted syntax that will need to be fixed manually.</p>
+<p>Some short variable names should be avoided in expressions as they are used internally and will not be correctly evaluated. The names are a, e, i, o, r, s, t, ac, eo, lf, lp, tt and numbered variations of them like a1, a2... tt1, tt2....</p>
+<h3 id="boolean-assignment">Boolean Assignment</h3>
+<p>To switch a variable's value True &lt;&gt; False use an exclamation in from of the value. This option is only available with the &quot;Expression&quot; option checked.</p>
+<pre class="NoIndent">MyVar := !MyVar</pre>
+<h2 id="expressions-in-command-parameters">Expressions in command parameters</h2>
+<p><em>From AutoHotkey Help File</em>:<br/>
+<strong>Force an expression</strong>: An expression can be used in a parameter that does not directly support it (except an OutputVar or InputVar parameter such as those of StringLen) by preceding the expression with a percent sign and a space or tab. If a variable is enclosed in percent signs within an expression (e.g. <code>%Var</code>*), whatever that variable contains is assumed to be the name or partial name of another variable (if there is no such variable, %Var% resolves to a blank string). This is most commonly used to reference pseudo-array elements such as the following example:</p>
+<pre class="NoIndent">FileAppend, % MyArray%i%, My File.txt</pre>
+<p>Download Example: <a href="Examples/DynamicVars.pmc">Accessing a Pseudo-Array inside Command Parameters</a></p>
+<h3 id="remarks">Remarks</h3>
+<p>You can assign <em>User Global Variables</em> with pre-defined contents that will be always available in Playback and for exporting in <a href="Settings.html#user-global-variables">Settings</a>.<br/></p>
+<h2 id="comparing-variables">Comparing Variables</h2>
+<p>To compare variables click the <em>If Statements</em> button, you may select <em>Evaluate Expression</em> to test any valid expresssion or select <em>Compare Variables</em> in the dropdown list. In the edit box you can enter a valid syntax to create the If Statement for comparing such as:</p>
+<pre class="NoIndent">MyVar = 5
+Clipboard &gt; %MyVar%</pre>
+<p>If the result is blank or 0 it's evaluated as false. Any other value, number or string, is evaluated as true.<br/></p>
+<p>In the <em>Compare Variables</em> option the <em>Variable</em> field must be a single variable word (not in percent signs) and the <em>Value</em> field you can enter any literal value and variables enclosed in percent signs.<br/></p>
+<p>The operators accepted are:</p>
+<pre class="NoIndent">= == &lt;&gt; != &gt; &lt; &gt;= &lt;=</pre>
+<p>In the <em>Evaluate Expression</em> option you can enter any valid expression, including multiple statements.</p>
+<pre class="NoIndent">MyVar &gt; 10 &amp;&amp; MyVar &lt; 20</pre>
+<p>In expressions variables must not be enclosed in percent signs (except to deference) and literal strings must be enclosed in quotes. A complete explanation can be found at <a href="http://autohotkey.com/docs/Variables.htm#Expressions" target="_blank">AHK documentation</a></p>
+<p>An <em><a href="Commands/Else.html">Else</a></em> statement may be used inside the <em>If</em> block and you can create an <em>Else If</em> by checking the option at the bottom of the <em>If Statements</em> window. An <em>Else If</em> statement must be inside another <em>If</em> block and does not have an <em>EndIf</em> of its own. The pseudo-code below shows the basic <em>If</em> structure in PMC.</p>
+<pre class="NoIndent">[If]
+[...]
+[Else If]
+[...]
+[Else]
+[...]
+[EndIf]</pre>
+<p>Download Example: <a href="Examples/CompareVars.pmc">Comparing Variables in Playback</a></p>
+<h2 id="assigning-and-retrieving-arrays">Assigning And Retrieving Arrays</h2>
+<p><strong>Pulover's Macro Creator</strong> supports objects/arrays. To assign an array you can either go the <em>Variables</em> window, check &quot;Expression&quot; option and add comma separated values inside brackets:</p>
+<pre class="NoIndent">MyArray := [10, 20, aVariable, &quot;aString&quot;])  <em>; Inside the Variables Assignment window</em></pre>
+<p>Or use the <em>Array</em> function in the <em>Functions</em> window. More information about objects can be found at the <a href="http://autohotkey.com/docs/Objects.htm" target="_blank">AHK Documentaion</a>.<br/></p>
+<p>You can also assign Associative arrays in the <em>Variables</em> window. With the &quot;Expression&quot; option checked, enter keys and values in the following format:</p>
+<pre class="NoIndent">{key1: &quot;string value&quot;, key2: varValue}</pre>
+<p>To retrieve an array inside a command use the same method as <em>Dynamic Variable Reference</em> by preceding the parameter with a percent sign and the following syntaxes:</p>
+<pre class="NoIndent">% MyArray[1]
+% MyArray[X] <em>; For arrays it's not necessary to enclose variables in percent signs.</em>
+% MyArray[Var] <em>; The key/index can be a variable, number, string or expression.</em>
+% MyArray[&quot;Type&quot;]
+% MyArray.Name <em>; Dotted syntax is also supported, and you can mix both brackets and dots too.</em></pre>
+<p>You can access the number of items inside the array using the Length() method in the Variables Assignment window when the &quot;Expression&quot; option is checked:</p>
+<pre class="NoIndent">MyArray := [10, 20, 30] <em>; Assign an array inside</em>
+ArrayCount := MyArray.Length() <em>; Returns 3</em>
+ArrayCount := MyArray.Length() + 1 <em>; Returns 4</em></pre>
+<p>The <em>Output Variable</em> field in Variables and Functions window, and the <em>Object Array</em> field in Functions window also accept array elements:</p>
+<pre class="NoIndent">MyArray[1] := &quot;New value&quot;
+Family.Father.Name := &quot;John&quot;</pre>
+<p>You can also get a reference to Length inside a Dynamic References:</p>
+<pre class="NoIndent">% MyArray.Length() <em>; Inside any command.</em></pre>
+<p>A <a href="Commands/For_Loop.html">For-Loop</a> can be used to retrieve the values one by one (an example is included in the link below).</p>
+<p>Download Example: <a href="Examples/Arrays.pmc">Assigning and retrieving Arrays</a></p>
+<h2 id="built-in-variables">Built-in Variables</h2>
+<p>Built-in Variables can be used inside the program to reference dynamic information. A list of these Variables with their description can be found in the <a href="http://autohotkey.com/docs/Variables.htm#BuiltIn" target="_blank">AutoHotkey documentation</a>.<br/>
+You can also insert Built-in Variables into command window fields by right-clicking on any empty area and selecting the <em>Built-in Variables</em> submenu where you'll find them divided in categories. Select one of them it will be inserted in the Carater-Insert position (already enclosed in percent signs).</p>
+</body>
+</html>

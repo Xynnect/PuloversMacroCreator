@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Variables</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Variables</h1>
+<p>Assigns a value to a Variable using the chosen operator. You can also assign expressions and linear/associative arrays using the &quot;Expression&quot; option. For more information see <a href="../Variables.html">Variables &amp; Arrays/Objects</a>.</p>
+
+<pre class="Syntax">Variables (Shift+F10)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Output Variable</dt>
+  <dd>Name of the Variable in which to store the contents. This field accepts Object references such as Array[1] or Obj.Name.</dd>
+  <dt>Operator</dt>
+  <dd>Operator to use in the assignment.</dd>
+  <dt>Value</dt>
+  <dd><p>If <em>Expression</em> is not checked, this field accepts strings, numbers and variables enclosed in percent signs. When using <em>Expression</em>, you can enter any valid expression.</p>
+<pre class="NoIndent">X := A string value <em>; If &quot;Expression&quot; is not checked, you don't need to use quotes for strings.</em>
+X := Today is %A_DD%. <em>; And it's necessary to enclose variables in percent signs.</em></pre></dd>
+  <dt>Expression</dt>
+  <dd><p>If checked, the value will be considered an expression. You can enter any valid expression, which may contain strings enclosed in quotes, variables (not enclosed in percent signs), numbers, math operations, functions and object references, including creating arrays.</p>
+<pre class="NoIndent">X := FoundX + 100 <em>; Assigns X to the value of FoundX + 100.</em>
+X := InStr(&quot;AutoHotkey&quot;, &quot;y&quot;) + 4 <em>; Assigns X to 14.</em>
+X := [10, 20, 30, &quot;String&quot;, Variable] <em>; Creates an array.</em>
+X := Array(1, 2, 3) <em>; Creates an array with the Array function.</em>
+Y := X[1] <em>; Assigns Y to the first value in the X array.</em>
+Y += 1 <em>; Increments Y by 1.</em>
+X := {Name: &quot;John&quot;, Age: 25}) <em>; Creates an associative array.</em>
+X[Name] := &quot;George&quot; <em>; Sets the &quot;Name&quot; element of X to &quot;George&quot;.</em>
+X.Age += 2 <em>; Adds 2 to the &quot;Age&quot; element of X.</em></pre>
+<p><em>Note</em>: To keep this option enabled by default go to Settings &gt; General and check the option.</p></dd>
+  <dt>Copy</dt>
+  <dd>Copies the variable's contents to the Clipboard.</dd>
+  <dt>Reset</dt>
+  <dd>Erases the variable's contents.</dd>
+</dl>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/Variables.htm" target="_blank">Variables</a></p>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Expression</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Expression</h1>
+<p>Performs one or more operations upon a series of variables, literal strings, and/or literal numbers. For more information see <a href="../Variables.html#expressions">Expressions</a>.</p>
+
+<pre class="Syntax">Expression (Shift+F12)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Automatically create COM object</dt>
+  <dd>Check this option let PMC create (if not yet created) a COM object using the defined CLSID.</dd>
+  <dt>Handle</dt>
+  <dd>Name of a Handle that will point to the object. You still need to use this Handle in the script to access methods and properties.</dd>
+  <dt>CLSID</dt>
+  <dd>CLSID or human-readable Prog ID of the COM object to create.</dd>
+  <dt>Connect</dt>
+  <dd>Attempts to connect the selected Handle with an existing instance of the selected CLSID.</dd>
+  <dt>Expression / COM Script</dt>
+  <dd>One or more expressions to be executed. You can make assingments, function and object calls, etc. You can enter multiple expressions separated by lines or commas. For details see <a href="http://autohotkey.com/docs/Variables.htm#Expressions" target="_blank">AHK documentation</a>.</dd>
+  <dt>Page Element / Index</dt>
+  <dd>Searches for a page element and index on an IE window.</dd>
+  <dt>Wait for page to load</dt>
+  <dd>Check this option when you expect the page to change after the command when running IE COM scripts. This will execute a function after it to wait for the new page to be completely loaded before continuing, avoiding errors.</dd>
+</dl>
+<h3>Remarks</h3>
+<p>You can enter multiple expressions separated by line or commas.</p>
+<p>You can make math operations, variables and object assignments, as well as function and object calls.</p>
+<p>Nearly all operators are supported, including ternary.</p>
+<p>The syntax for COM/object calls is the same as in AutoHotkey scripts:</p>
+<ul>
+<li>Variables must NOT be enclosed in percent signs.</li>
+<li>Strings MUST be enclosed in quotes.</li>
+</ul>
+<p>When you close the application, all references to Active Objects will be lost. To continue working using saved project files you must reconnect to the application by either editing one of the lines containing each handle and use the <em>Connect</em> button to re-create all references, or assigning the Handle to a ComObj function, usually ComObjActive(), though it will not work on all applications.</p>
+<p>To bypass error messages go to Options &gt; Settings &gt; Playback and check the &quot;Do not display errors&quot; option.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/Variables.htm#Expressions" target="_blank">Expressions</a>, <a href="http://autohotkey.com/docs/Variables.htm#Operators" target="_blank">Operators in Expressions</a>, <a href="http://autohotkey.com/docs/commands/ComObjCreate.htm" target="_blank">COM</a>, <a href="http://www.autohotkey.com/board/topic/47052-basic-webpage-controls" target="_blank">Basic Webpage COM Tutorial</a>, <a href="http://msdn.microsoft.com/en-us/library/aa752127" target="_blank">IWebBrowser2 Interface (MSDN)</a></p>
+
+</body>
+</html>

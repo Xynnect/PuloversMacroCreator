@@ -1,0 +1,51 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Functions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Functions</h1>
+<p>Executes a Function and assigns the result to a Variable. You can also call object methods in this window.</p>
+
+<pre class="Syntax">Functions (Ctrl+F10)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Output Variable (Optional)</dt>
+  <dd>Name of the Variable in which to store the contents.</dd>
+  <dt>Array Object</dt>
+  <dd>If checked, the name of an Array/Object on which to call the method.</dd>
+  <dt>Use Function from External File</dt>
+  <dd>Check this option to select an AutoHotkey Script File (.ahk) containing one or more functions to be used. This feature requires <a href="http://autohotkey.com/" target="_blank">AutoHotkey</a> installed.<br/>
+See Remarks below for more information.</dd>
+  <dt>Function Name</dt>
+  <dd>A valid AHK Built-in Function, an existing <a href="Functions.html#user-defined-functions">User-Defined function</a> or one in the selected external .ahk file.</dd>
+  <dt>Comma separated parameters</dt>
+  <dd><p>The list of parameters for the function.
+<em>Notes</em>:</p>
+<ul>
+<li>Input only the parameters values, without parenthesis.</li>
+<li>Use <a href="../Variables.html#expressions">Expression</a> format.</li>
+<li>Do NOT enclose variables in percent signs.</li>
+<li>Strings MUST be enclosed in quotes.</li>
+<li>Omitted optional parameters will use their default values.</li>
+</ul>
+<pre class="NoIndent">InStr(&quot;AutoHotkey&quot;, &quot;o&quot;, , , 2)</pre>
+<p>The function above have 5 possible parameters. In this example parameters 3 and 4 will use the default values.</p></dd>
+</dl>
+<h3>Remarks</h3>
+<p>AutoHotkey's Built-in Functions are supported by default. You can also define your own functions inside PMC in <a href="http://www.autohotkey.com/" target="_blank">User-Defined functions](Functions.html#user-defined-functions) window and run functions from external AutoHotkey Script Files, if you have [AutoHotkey</a> installed.</p>
+<h3 id="external-functions">External Functions</h3>
+<p>If a <em>Standard Library File</em> is configured it will be automatically loaded when a new command is added.</p>
+<p>When you load an external file the program will try to detect possible function names and list them in <em>Function Name</em> field. If the function you want doesn't appear in the list you can still type it manually.</p>
+<p>When this feature is used in Playback it will create a temporary .ahk file in the same directory where Macro Creator is installed and run it using AutoHotkey. The result will be copied to the Output Variable and the script will be closed.</p>
+<p>If the ahk file containing the function have #include directives they must contain the absolute path for the included files (e.g.: #include c:\lib\myfunction.ahk).</p>
+<p>Since those functions are not loaded with Macro Creator they may take longer to execute.</p>
+<p><strong>Note</strong>: This feature is limited and can only return 1 string/number value. It's recommended to use <a href="Functions.html#user-defined-functions">User-Defined Functions</a> instead.</p>
+
+</body>
+</html>

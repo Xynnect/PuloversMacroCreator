@@ -1,0 +1,38 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Loop Parse</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Loop Parse</h1>
+<p>Retrieves substrings (fields) from a string, one at a time.</p>
+
+<pre class="Syntax">Loop Parse (F9)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Input Variable</dt>
+  <dd>The name of the variable whose contents will be analyzed. Do not enclose the name in percent signs.</dd>
+  <dt>Delimiters</dt>
+  <dd>If this parameter is blank or omitted, each character of InputVar will be treated as a separate substring.<br/>
+If this parameter is CSV, InputVar will be parsed in standard comma separated value format.<br/>
+Otherwise, Delimiters contains one or more characters (case sensitive), each of which is used to determine where the boundaries between substrings occur in InputVar.</dd>
+  <dt>Omit Characters</dt>
+  <dd>An optional list of characters (case sensitive) to exclude from the beginning and end of each substring.<br/>
+For example, if OmitChars is %A_Space%%A_Tab%, spaces and tabs will be removed from the beginning and end (but not the middle) of every retrieved substring.</dd>
+</dl>
+<h3>Remarks</h3>
+<p>The built-in variable <strong>A_LoopField</strong> exists within any parsing loop. It contains the contents of the current substring (field) from InputVar. If an inner parsing loop is enclosed by an outer parsing loop, the innermost loop's field will take precedence.</p>
+<p>A Loop command in Playback may perform different then an exported script duo to the method used internally by Macro Creator.</p>
+<p>In Playback all iterations will be performed prior to any commands in the Loop section.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/LoopParse.htm" target="_blank">Loop Parse</a></p>
+<h3 id="download-example">Download Example</h3>
+<p><a href="Examples/LoopTypes.pmc">Examples of Loop commands</a></p>
+
+</body>
+</html>

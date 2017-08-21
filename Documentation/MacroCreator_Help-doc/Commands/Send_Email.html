@@ -1,0 +1,37 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Send Email</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Send Email</h1>
+<p>Sends emails using an user-defined account. All fields accept <a href="../Variables.html">variables</a>.</p>
+
+<pre class="Syntax">Send Email (F11)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Message</dt>
+  <dd>Body of the message. It can be text or HTML.</dd>
+  <dt>HTML</dt>
+  <dd>Check this option to use HTML format in the email body.</dd>
+  <dt>Headers</dt>
+  <dd>Standard Email fields.</dd>
+  <dt>Attachments</dt>
+  <dd>Add and edit file attachments. Add one file per line with the full path. You can drop files in here.</dd>
+</dl>
+<h3>Remarks</h3>
+<p>You can add and edit accounts clicking on the <em>Email accounts</em> link or in the Settings window.</p>
+<p>Accounts informations are saved to <em>UserEmailAccounts.ini</em> located at %AppData%\MacroCreator or at the application folder when in Portable mode.</p>
+<p>To use a Gmail account it's necessary to activate allow <a href="https://www.google.com/settings/security/lesssecureapps" target="_blank">&quot;Less secure apps access&quot;</a>.</p>
+<p><strong>Warning</strong>: Scripts exported (even if compiled) with the send email function (CDO) will have visible informations of email accounts used, including the <strong>password</strong>. The PMC project file does not have this information.</p>
+<p>To bypass error messages go to Options &gt; Settings &gt; Playback and check the &quot;Do not display errors&quot; option.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/ComObjCreate.htm" target="_blank">COM</a>, <a href="http://msdn.microsoft.com/en-us/library/ms988614" target="_blank">CDO (Microsoft MSDN)</a></p>
+
+</body>
+</html>

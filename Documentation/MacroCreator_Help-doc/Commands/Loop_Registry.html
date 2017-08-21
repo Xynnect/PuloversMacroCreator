@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Loop Registry</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Loop Registry</h1>
+<p>Retrieves the contents of the specified registry subkey, one item at a time.
+Key must be separated from RootKey by a slash instead of a comma, and both can be contained within a single variable. For example, Loop, Reg, HKLM\Software or Loop, Reg, %FullPathOfKey%.</p>
+
+<pre class="Syntax">Loop Registry (F9)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Root Key</dt>
+  <dd>Must be either HKEY_LOCAL_MACHINE (or HKLM), HKEY_USERS (or HKU), HKEY_CURRENT_USER (or HKCU), HKEY_CLASSES_ROOT (or HKCR), or HKEY_CURRENT_CONFIG (or HKCC).<br/>
+To access a remote registry, prepend the computer name and a colon, as in this example: \workstation01:HKEY_LOCAL_MACHINE</dd>
+  <dt>Key</dt>
+  <dd>The name of the key (e.g. Software\SomeApplication). If blank or omitted, the contents of RootKey will be retrieved.</dd>
+  <dt>Values</dt>
+  <dd>If checked will include Values.</dd>
+  <dt>Keys</dt>
+  <dd>If checked will include keys.</dd>
+  <dt>Recurse</dt>
+  <dd>If checked will recurse into subkeys.</dd>
+</dl>
+<h3>Remarks</h3>
+<p>The following variables exist within any registry-loop. If an inner registry-loop is enclosed by an outer registry-loop, the innermost loop's registry item will take precedence:</p>
+<ul>
+<li>A_LoopRegName, A_LoopRegType, A_LoopRegKey, A_LoopRegSubKey, A_LoopRegTimeModified</li>
+</ul>
+<p>For a description of each variable follow the link in the <strong>Related</strong> section below.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/LoopReg.htm" target="_blank">Loop Registry</a></p>
+
+</body>
+</html>

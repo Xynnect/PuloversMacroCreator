@@ -1,0 +1,28 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Loop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Loop</h1>
+<p>Loops a section of the Macro enclosed within <em>LoopStart</em> and <em>LoopEnd</em>. Nested Loops are accepted.</p>
+
+<pre class="Syntax">Loop (F9)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Repeat</dt>
+  <dd>How many times to execute the loop section. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed. This field accepts <a href="../Variables.html">Variables &amp; Expressions</a>.</dd>
+</dl>
+<h3>Remarks</h3>
+<p>The built-in variable <strong>A_Index</strong> contains the number of the current loop iteration. It contains 1 the first time the loop's body is executed. For the second time, it contains 2; and so on. If an inner loop is enclosed by an outer loop, the inner loop takes precedence.</p>
+<p>A Loop command in Playback may perform different then an exported script duo to the method used internally by Macro Creator.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/Loop.htm" target="_blank">Loop</a></p>
+
+</body>
+</html>

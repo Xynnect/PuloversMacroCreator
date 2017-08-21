@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Text</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Text</h1>
+<p>Sends simulated keystrokes to a window. It may be used to send raw text or commands. This field accepts <a href="../Variables.html">Variables &amp; Expressions</a>.</p>
+
+<pre class="Syntax">Text (F3)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Plain Text (Raw)</dt>
+  <dd>Uses <em>SendRaw</em>. The SendRaw command interprets all characters literally rather than translating {Enter} to an ENTER keystroke, ^c to Control-C, etc.</dd>
+  <dt>Text with commands</dt>
+  <dd>Uses <em>SendInput</em>. When not in raw mode, the following characters are treated as modifiers (these modifiers affect only the very next key): !, +, ^, #.</dd>
+  <dt>Set key delay</dt>
+  <dd>Uses <em>SendEvent</em>. The rate at which keystrokes are sent is determined by Key Delay.</dd>
+  <dt>Paste from Clipboard</dt>
+  <dd>Temporarily uses Clipboard to send the text. When the operation is completed, the script restores the original clipboard contents.</dd>
+  <dt>Paste on Control</dt>
+  <dd>Uses <em>Control, EditPaste</em>. Pastes String at the caret/insert position in an Edit control (this does not affect the contents of the clipboard).</dd>
+  <dt>SetText</dt>
+  <dd>Uses <em>ControlSetText</em>. Changes the text of a control.</dd>
+  <dt>Key delay</dt>
+  <dd>Sets the delay that will occur after each keystroke sent in <em>Text with commands</em> mode.</dd>
+  <dt>Insert KeyStroke</dt>
+  <dd>Opens the Insert Keystroke window where you can choose a keyboard key from a list. Double-click or click <em>Insert</em> to insert the key in the current cursor postion. The key will be inserted in AutoHotkey <em>Send</em> format, only valid for <em>Text with commands</em> option.</dd>
+</dl>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/Send.htm" target="_blank">Send / SendRaw</a>, <a href="http://autohotkey.com/docs/commands/ControlSend.htm" target="_blank">ControlSend</a>, <a href="http://autohotkey.com/docs/commands/ControlSetText.htm" target="_blank">ControlSetText</a>, <a href="http://autohotkey.com/docs/misc/Clipboard.htm" target="_blank">Clipboard</a></p>
+
+</body>
+</html>

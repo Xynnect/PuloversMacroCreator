@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Internet Explorer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Internet Explorer</h1>
+<p>Creates an Internet Explorer COM Object and adds automation commands for it. All fields accept <a href="../Variables.html">variables</a>, except <em>Commands</em>.</p>
+
+<pre class="Syntax">Internet Explorer (F12)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Commands</dt>
+  <dd>The dropdown list contains some of the most used IE Methods and Properties. Select the correct one to manipulate the browser window or page elements.</dd>
+  <dt>Set / Get</dt>
+  <dd>Chooses whether to set a value to the object or to copy the element's value to a variable.</dd>
+  <dt>Method / Property</dt>
+  <dd>If you type a command that is not recognized by the program you have to select whether it's a Method or a Property.</dd>
+  <dt>Value</dt>
+  <dd>Value to be used by a Method or to be set to a Property. This field accepts <a href="../Variables.html">Variables &amp; Expressions</a>.</dd>
+  <dt>Output Variable</dt>
+  <dd>The name of the variable in which to store the value of a Property.</dd>
+  <dt>Page Element / Index</dt>
+  <dd>Sets the page element and index on which to perform the action. The dropdown list selects the method to be used to identify the element. Use the <em>Get</em> button to easily identify elements of the page.</dd>
+  <dt>Wait for page to load</dt>
+  <dd>Check this option when you expect the page to change after the command. This will execute a function after it to wait for the new page to be completely loaded before continuing, avoiding errors.</dd>
+</dl>
+<h3>Remarks</h3>
+<p>When you close the application, all references to Active Windows will be lost, to continue working using saved project files edit one of the lines and use the dropdown list to select the window you'll work with.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/ComObjCreate.htm" target="_blank">COM</a>, <a href="http://www.autohotkey.com/board/topic/47052-basic-webpage-controls" target="_blank">Basic Webpage COM Tutorial</a>, <a href="http://msdn.microsoft.com/en-us/library/aa752127" target="_blank">IWebBrowser2 Interface (MSDN)</a></p>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Loop FilePattern</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Loop FilePattern</h1>
+<p>Retrieves the specified files or folders, one at a time.</p>
+
+<pre class="Syntax">Loop FilePattern (F9)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>File Pattern</dt>
+  <dd>The name of a single file or folder, or a wildcard pattern such as C:\Temp*.tmp.</dd>
+  <dt>Files</dt>
+  <dd>If checked will include files.</dd>
+  <dt>Directories</dt>
+  <dd>If checked will include directories (folders).</dd>
+  <dt>Recurse</dt>
+  <dd>If checked will recurse into subdirectories (subfolders).</dd>
+</dl>
+<h3>Remarks</h3>
+<p>The following variables exist within any file-loop. If an inner file-loop is enclosed by an outer file-loop, the innermost loop's file will take precedence:</p>
+<ul>
+<li>A_LoopFileName, A_LoopFileExt, A_LoopFileFullPath, A_LoopFileLongPath, A_LoopFileShortPath, A_LoopFileShortName, A_LoopFileDir, A_LoopFileTimeModified, A_LoopFileTimeCreated, A_LoopFileTimeAccessed, A_LoopFileAttrib, A_LoopFileSize, A_LoopFileSizeKB, A_LoopFileSizeMB</li>
+</ul>
+<p>For a description of each variable follow the link in the <strong>Related</strong> section below.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/LoopFile.htm" target="_blank">Loop FilePattern</a></p>
+<h3 id="download-example">Download Example</h3>
+<p><a href="Examples/LoopTypes.pmc">Examples of Loop commands</a></p>
+
+</body>
+</html>

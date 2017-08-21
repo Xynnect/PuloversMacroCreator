@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Loop Read</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Loop Read</h1>
+<p>Retrieves the lines in a text file, one at a time.</p>
+
+<pre class="Syntax">Loop Read (F9)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Input File</dt>
+  <dd>The name of the text file whose contents will be read by the loop.</dd>
+</dl>
+<h3>Remarks</h3>
+<p>The built-in variable <strong>A_LoopReadLine</strong> exists within any file-reading loop. It contains the contents of the current line excluding the carriage return and linefeed (<code>r</code>n) that marks the end of the line. If an inner file-reading loop is enclosed by an outer file-reading loop, the innermost loop's file-line will take precedence.</p>
+<p>A Loop command in Playback may perform different then an exported script duo to the method used internally by Macro Creator.</p>
+<p>In Playback all iterations will be performed prior to any commands in the Loop section.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/LoopReadFile.htm" target="_blank">Loop Read File</a></p>
+<h3 id="download-example">Download Example</h3>
+<p><a href="Examples/LoopTypes.pmc">Examples of Loop commands</a></p>
+
+</body>
+</html>

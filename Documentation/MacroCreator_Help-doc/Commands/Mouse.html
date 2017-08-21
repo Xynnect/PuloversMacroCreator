@@ -1,0 +1,42 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Mouse</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Mouse</h1>
+<p>Clicks a mouse button at the specified coordinates. It can also hold down a mouse button, turn the mouse wheel, or move the mouse.</p>
+
+<pre class="Syntax">Mouse (F2)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Action</dt>
+  <dd>Selects the Mouse action to execute.</dd>
+  <dt>Coordinates</dt>
+  <dd>Defines the coordinates of the window or screen where the action will be executed. This field accepts <a href="../Variables.html">Variables</a>, functions and expressions are not supported.<br/>
+<strong>Note</strong>: Mouse Actions are affected by <a href="Settings.html#defaults">Mouse Coordinates Settings</a>.</dd>
+  <dt>Click</dt>
+  <dd>Uses the <em>Click</em>. This usually works for most cases.</dd>
+  <dt>Send</dt>
+  <dd>Uses <em>SendEvent</em>. Use this in case the Click Command doesn't work.</dd>
+  <dt>Relative</dt>
+  <dd><strong>If not used with Control</strong>: Coordinates will be treated as an offset from mouse current position.<br/>
+<strong>If used with Control</strong>: <em>Unchecked</em>: Click coordinates relative to the target window. <em>Checked</em>: Click coordinates relative to Control's position.</dd>
+  <dt>Button</dt>
+  <dd>Selects the Mouse Button to send and the event type.<br/>
+<strong>Normal</strong>: Sends a normal click.<br/>
+<strong>Hold</strong>: Clicks and holds the button.<br/>
+<strong>Release</strong>: Releases the button.</dd>
+  <dt>Click Count</dt>
+  <dd>The number of times to click the mouse. This is not affected by Delay. This field accepts <a href="../Variables.html">Variables</a>.</dd>
+</dl>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/Click.htm" target="_blank">Click</a>, <a href="http://autohotkey.com/docs/commands/ControlClick.htm" target="_blank">ControlClick</a>, <a href="http://autohotkey.com/docs/commands/MouseClickDrag.htm" target="_blank">MouseClickDrag</a></p>
+
+</body>
+</html>

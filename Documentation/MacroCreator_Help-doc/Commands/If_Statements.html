@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>If Statements</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>If Statements</h1>
+<p>Creates a Control of Flow block. The commands enclosed within the If Statement and EndIf will only be executed if the evaluated statement returns TRUE, which can be a number different than 0 or a non-empty string.</p>
+
+<pre class="Syntax">If Statements (F10)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Options DropdownList</dt>
+  <dd><p>Selects the statement to evaluate. If the statement resolves to true the commands inside below the If Statement will be executed, otherwise they will be skipped until <em>EndIf</em> or an <em>Else</em> is reached.<br/>
+For <em>Compare Variables</em> the VarName to the left of the operator should NOT be enclosed in percent signs, only the variables to the right of it must use them.<br/>
+The operators accepted are:<br/></p>
+<pre class="NoIndent">=, ==, &lt;&gt;, !=, &gt;, &lt;, &gt;=, &lt;=.  </pre>
+<p><em>Evaluate Expression</em> can evaluate any valid expression as true or false. Variables must NOT be enclosed in percent signs. For more information see <a href="../Variables.html#expressions">Expressions</a>.</p></dd>
+  <dt>Add Else</dt>
+  <dd>Add an <em>Else</em> Statement. If the If Statement above it resolves to false the commands below it will be executed instead, otherwise they will be skipped until <em>EndIf</em> is reached. This should be placed before the <em>EndIf</em>.</dd>
+  <dt>Else If</dt>
+  <dd>Creates an <em>Else If</em> statement, which means that the statement must be inside another If block and will be evaluated only if the If before it evaluates to false. When this option is checked the <em>EndIf</em> row will not be created.</dd>
+</dl>
+<h3>Remarks</h3>
+<p>To evaluate two or more statements you can use the <em>Evaluate Expression</em> option as it supports multiple statements (e.g. Var &gt; 10 &amp;&amp; Var &lt; 20) or you can add them in sequence in the list, each one with a corresponding EndIf.</p>
+<p>For more details on usage with other commands see <a href="../Variables.html">Variables</a>.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/IfWinActive.htm" target="_blank">IfWinActive / IfWinNotActive</a>, <a href="http://autohotkey.com/docs/commands/IfWinExist.htm" target="_blank">IfWinExist / IfWinNotExist</a>, <a href="http://autohotkey.com/docs/commands/IfExist.htm" target="_blank">IfExist / IfNotExist</a>, <a href="http://autohotkey.com/docs/commands/IfInString.htm" target="_blank">IfInString / IfNotInString</a>, <a href="http://autohotkey.com/docs/commands/IfMsgBox.htm" target="_blank">IfMsgBox</a>, <a href="http://autohotkey.com/docs/commands/IfEqual.htm" target="_blank">If Statements</a></p>
+
+</body>
+</html>

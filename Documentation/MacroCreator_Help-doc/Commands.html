@@ -1,0 +1,71 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Command Windows</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1 id="command-windows">Command Windows</h1>
+<p><strong>Tip</strong>: Right-click on an empty area of a Command Window to display links to AutoHotkey online documentation and related contents.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#find-a-command">Find a Command</a></li>
+<li><a href="#common-fields">Common Fields</a></li>
+<li><a href="Commands/Mouse.html">Mouse</a></li>
+<li><a href="Commands/Text.html">Text</a></li>
+<li><a href="Commands/Control.html">Control</a></li>
+<li><a href="Commands/Pause.html">Pause</a></li>
+<li><a href="Commands/Message_Box.html">Message Box</a></li>
+<li><a href="Commands/KeyWait.html">KeyWait</a></li>
+<li><a href="Commands/Window.html">Window</a></li>
+<li><a href="Commands/Image_Search.html">Image Search</a></li>
+<li><a href="Commands/Pixel_Search.html">Pixel Search</a></li>
+<li><a href="Commands/Run.html">Run / File / String / Misc.</a></li>
+<li><a href="Commands/Loop.html">Loop</a></li>
+<li><a href="Commands/Loop_FilePattern.html">Loop FilePattern</a></li>
+<li><a href="Commands/Loop_Parse.html">Loop Parse</a></li>
+<li><a href="Commands/Loop_Read.html">Loop Read</a></li>
+<li><a href="Commands/Loop_Registry.html">Loop Registry</a></li>
+<li><a href="Commands/While_Loop.html">While-Loop</a></li>
+<li><a href="Commands/For_Loop.html">For Loop</a></li>
+<li><a href="Commands/Until.html">Until</a></li>
+<li><a href="Commands/Goto_and_GoSub.html">Goto / GoSub</a></li>
+<li><a href="Commands/Label.html">Label</a></li>
+<li><a href="Commands/Set_Timer.html">Set Timer</a></li>
+<li><a href="Commands/If_Statements.html">If Statements</a></li>
+<li><a href="Commands/Variables.html">Variables / Arrays</a></li>
+<li><a href="Commands/Functions.html">Functions / Array Methods</a></li>
+<li><a href="Commands/Send_Email.html">Send Email</a></li>
+<li><a href="Commands/Download_Files.html">Download Files</a></li>
+<li><a href="Commands/Zip_Files.html">Zip/Unzip Files</a></li>
+<li><a href="Commands/Internet_Explorer.html">Internet Explorer</a></li>
+<li><a href="Commands/Expression.html">Expression / COM Interface</a></li>
+<li><a href="Commands/PostMessage_and_SendMessage.html">PostMessage / SendMessage</a></li>
+</ul>
+<h2 id="find-a-command">Find a Command</h2>
+<p>This window allows you to easily search for a command or function. Simply type a keyword and the results will be displayed in the box below. Double-Click an item or press Enter to open the target window. You can also use the search bar in the main window toolbar.</p>
+<h2 id="common-fields">Common Fields</h2>
+<p>The following fields appear on some of the Command Windows and will behave the same for all, therefore will be omitted from their parameters.</p>
+<h3 id="repeat">Repeat</h3>
+<p>How many times to execute the command. This field is ignored in some commands. This field accepts <a href="Variables.html">Variables &amp; Expressions</a>.</p>
+<h3 id="delay">Delay</h3>
+<p>Time to wait before the next command line, except for the <em>Message box</em> and <em>KeyWait</em> command it sets the <em>Timeout</em>, for the <em>Set Timer</em> command it sets the Period. This field is ignored in some of the commands. This field accepts <a href="Variables.html">Variables &amp; Expressions</a>.</p>
+<h3 id="control">Control</h3>
+<p>Selects the target control to send the command. Use the <em>Get</em> button (...) to easily find a control's name: Point the mouse to its location and Right-Click on it. To operate upon a control's HWND (unique ID), leave the Control parameter blank and specify ahk_id %ControlHwnd% for the WinTitle parameter. This field accepts <a href="Variables.html">Variables &amp; Expressions</a>.<br/>
+The <em>Get</em> button automatically fills the <em>Window</em> field as well, using the selected items in <em>WinTitle</em>.</p>
+<h3 id="window">Window</h3>
+<p>Title, partial title or identifier of a target window. The first parameter is <a href="http://autohotkey.com/docs/misc/WinTitle.htm" target="_blank">WinTitle</a>, you can add one or more extra parameters separating them by commas: <code>WinTitle, WinText, ExcludeTitle, ExcludeText</code>. You can omit any of those parameters, including WinTitle. This field accepts <a href="Variables.html">Variables &amp; Expressions</a>.</p>
+<p><strong>WinTitle</strong> matching behavior is determined by <a href="Playback.html#title-match-mode">Title Match Mode</a> and <a href="Playback.html#detect-hidden-windows">Detect Hidden Windows</a> settings.</p>
+<p>The <em>WinTitle</em> button selects what informations to retrieve from a target window (Title/Class/Process/ID/ProcessID) with the <em>Get</em> tool for the WinTitle parameter. Check one or more items in the list and use the <em>Get</em> button (...) to copy the available information from the window.<br/>
+<strong>Note</strong>: The options checked only determine what the <em>Get</em> tool will retrieve, it does not affect the command.</p>
+<p>Additionally to <strong>WinTitle</strong> you can also add the following parameters separated by commas:</p>
+<ul>
+<li><strong>WinText</strong>: If present, this parameter must be a substring from a single text element of the target window (as revealed by the included Window Spy utility). Hidden text elements are detected if DetectHiddenText is ON.</li>
+<li><strong>ExcludeTitle</strong>: Windows whose titles include this value will not be considered.</li>
+<li><strong>ExcludeText</strong>: Windows whose text include this value will not be considered.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Export Window</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1 id="export">Export</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#macros">Macros</a></li>
+<li><a href="#context-sensitive-hotkeys">Context Sensitive Hotkeys</a></li>
+<li><a href="#destination-file">Destination File</a></li>
+<li><a href="#options">Options</a></li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>Exports selected Macros to a working AutoHotkey Script file (*.ahk), optionally converting the script to an executable (EXE) file (requires the latest version of <a href="http://autohotkey.com/" target="_blank">AutoHotkey</a> installed).</p>
+<h2 id="macros">Macros</h2>
+<p>Select Macros to be exported. Empty Macros and unchecked rows will be ignored. You can click and drag items and double-click to open the edit window.</p>
+<h3 id="macro">Macro</h3>
+<p>Name of the label used for the macro (leave blank to remove it from the exported script).</p>
+<h3 id="hotkey">Hotkey</h3>
+<p>Selects the Hotkey (AutoHotkey format) to execute the Macro. Here you can use Hotkeys that are not allowed for playback like RButton. You also edit the Hotkey directly in the list by either selecting the row and pressing F2 or you can click a row once to select it, wait at least half a second, then click the same row again to edit it.</p>
+<h3 id="loop">Loop</h3>
+<p>Number of times to execute this Macro.</p>
+<h3 id="block-mouse">Block Mouse</h3>
+<p>AddslockInput, MouseMove`. The mouse cursor will not move in response to the user's physical movement of the mouse during execution.</p>
+<h3 id="stop">Stop</h3>
+<p>Adds a Hotkey with the ÈxitApp`command.</p>
+<h3 id="pause">Pause</h3>
+<p>Adds a Hotkey with the <code>Pause</code>command.</p>
+<h2 id="destination-file">Destination File</h2>
+<h3 id="export-to">Export to</h3>
+<p>Selects the destination file to export selected Macros.</p>
+<h3 id="indentation">Indentation</h3>
+<p>Use Tab-Indentation for Loops and If Statements.</p>
+<h3 id="comment-out-unchecked-rows">Comment out unchecked rows</h3>
+<p>Keeps unchecked rows in the macro as commented out script, instead of not exporting them.</p>
+<h3 id="do-not-concatenate-send-commands">Do not concatenate Send commands</h3>
+<p>Exports sequences of Send commands in one line each and uses Loop for repeats.</p>
+<h3 id="convert-line-breaks">Convert line breaks</h3>
+<p>Converts line break symbols (`n) in command parameters to real line breaks.</p>
+<h3 id="include-pmc-code">Include PMC Code</h3>
+<p>Includes a copy of the PMC code for each selected Macro at the end of the exported script to allow them to be loaded in <strong>Macro Creator</strong> by opening the ahk file from it. This will not affect the exported script execution.</p>
+<h3 id="create-exe-file">Create EXE File</h3>
+<p>Runs Ahk2Exe Compiler after exporting the script to create an Executable File. The EXE file will be saved to the same folder as the script.<br/>
+Once a script is compiled, it becomes a standalone executable; that is, it can be used even on machines where AutoHotkey is not installed (and such EXEs can be distributed or sold with no restrictions).<br/>
+<em>Note</em>: This feature requires the latest version of <a href="http://autohotkey.com/" target="_blank">AutoHotkey</a> installed. The Ahk2Exe file must be present in the Compiler folder inside AutoHotkey installation folder, if the file is not found the EXE will not be created (no error will be shown).</p>
+<h2 id="context-sensitive-hotkeys">Context Sensitive Hotkeys</h2>
+<p>Makes hotkeys and hotstrings work depending on the type of window that is active or exists, or if an expression evaluates to true. For more information see <a href="Playback.html#context-sensitive-hotkeys">Playback</a>.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/_IfWinActive.htm" target="_blank">#IfWinActive</a>, <a href="http://autohotkey.com/docs/commands/_If.htm" target="_blank">#If</a></p>
+<h2 id="options">Options</h2>
+<p>Changes various options for the exported script's Auto-Execute Section. For more information see <a href="http://autohotkey.com/docs" target="_blank">AutoHotkey documentation</a>.</p>
+<h3 id="#include">#Include</h3>
+<p>Includes in the script files with external functions using the #Include directive, when they are present in one of the exported macros.</p>
+<h3 id="global-variables">Global Variables</h3>
+<p>If you have defined <a href="Settings.html#user-global-variables">User Global Variables</a> you can select which of them will be included in the exported file. They will be added to the Auto-execute section.</p>
+<h3 id="speed">Speed</h3>
+<p>Increases or decreases the delay of Sleep (Pause) commands in exported scripts.</p>
+<h3 id="com-objects">COM Objects</h3>
+<p>Default behavior for the <em>Automatically create COM object</em> option in <strong>Expression</strong> window. <a href="http://autohotkey.com/docs/commands/ComObjCreate.htm" target="_blank">ComObjCreate</a> will create a new COM object based with the given CLSID, while <a href="http://autohotkey.com/docs/commands/ComObjActive.htm" target="_blank">ComObjActive</a> will try to connect to an existing instance of the application.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/Hotkeys.htm" target="_blank">Hotkeys</a>, <a href="http://autohotkey.com/docs/Hotstrings.htm" target="_blank">Hotstrings</a>, <a href="http://autohotkey.com/docs/KeyList.htm" target="_blank">List of Keys</a>, <a href="http://autohotkey.com/docs/commands/ComObjCreate.htm" target="_blank">ComObjCreate</a>, <a href="http://autohotkey.com/docs/commands/ComObjActive.htm" target="_blank">ComObjActive</a>, <a href="http://autohotkey.com/docs/Scripts.htm#auto" target="_blank">Auto-execute Section</a>, <a href="http://autohotkey.com/docs/commands/_IfWinActive.htm" target="_blank">#IfWinActive / #IfWinExist</a>, <a href="http://autohotkey.com/docs/commands/_If.htm" target="_blank">#If</a></p>
+</body>
+</html>

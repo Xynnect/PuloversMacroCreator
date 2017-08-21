@@ -1,0 +1,33 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Else</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Else</h1>
+<p>Specifies the command(s) to perform if an IF-statement evaluates to FALSE. When more than one command is present, enclose them in a block (braces). For more information see <a href="../Variables.html#comparing-variables">Comparing Variables</a>.</p>
+
+<pre class="Syntax">Else (F10)</pre>
+<h3>Remarks</h3>
+<p>Every use of ELSE must belong to (be associated with) an IF-statement above it. An ELSE always belongs to the nearest unclaimed IF-statement above it unless a block is used to change that behavior.</p>
+<p>An ELSE can be followed immediately by any other single command on the same line. This is most often used for &quot;else if&quot; ladders.</p>
+<p>An <em>Else If</em> statement must be inside another <em>If</em> block and does not have an <em>EndIf</em> of its own. The pseudo-code below shows the basic <em>If</em> structure in PMC.</p>
+<pre class="NoIndent">[If]
+[...]
+[Else If]
+[...]
+[Else]
+[...]
+[EndIf]</pre>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/Else.htm" target="_blank">Else</a></p>
+<h3 id="download-example">Download example</h3>
+<p><a href="Examples/CompareVars.pmc">Comparing Variables in Playback</a></p>
+
+</body>
+</html>

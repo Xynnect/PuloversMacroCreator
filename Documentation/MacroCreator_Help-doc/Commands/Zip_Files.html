@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Zip Files</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Zip Files</h1>
+<p>Compress or uncompress one or more zip files. All fields accept <a href="../Variables.html">variables</a>.</p>
+
+<pre class="Syntax">Zip Files (Ctrl+F11)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Zip files / Unzip files</dt>
+  <dd>Select the desired operation.</dd>
+  <dt>Destination file/folder</dt>
+  <dd>The name of the destination, which is assumed to be in %A_WorkingDir% if an absolute path isn't specified.</dd>
+  <dt>Files</dt>
+  <dd>A list of files or patterns to be compressed or uncompressed. Separate files by semicolon, comma or line. You can drop files in here.</dd>
+  <dt>Compress/Extract each file to different archive/folder</dt>
+  <dd>Check this option to have each file/folder compressed or extracted to an individual file/folder.</dd>
+</dl>
+<h3>Remarks</h3>
+<p>For <em>Zip</em> command you can use file patterns in <em>Files</em>, e.g.: C:\File*.*.</p>
+<p>You can extract multiple zip files in the same command.</p>
+<p>This function does not support other types of compressed files. For other formats, use the <code>Run</code> command to execute an adequate application.</p>
+<p>To bypass error messages go to Options &gt; Settings &gt; Playback and check the &quot;Do not display errors&quot; option.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/ComObjCreate.htm" target="_blank">COM</a>, <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/bb774094" target="_blank">Shell object (Microsoft MSDN)</a></p>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Image Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Image Search</h1>
+<p>Searches a region of the screen for an image.</p>
+
+<pre class="Syntax">Image Search (F7)</pre>
+<h3>Parameters</h4>
+<dl>
+  <dt>Start X/Y / End X/Y</dt>
+  <dd>Defines the Search area of the screen/window.</dd>
+  <dt>Make Screenshot</dt>
+  <dd>Use this tool to take a screenshot of an area of the screen (see <a href="#make-screenshot-tool-instructions">Instructions</a> for details on usage).</dd>
+  <dt>File</dt>
+  <dd>Path for the image file, which is assumed to be in the same folder as MacroCreator.exe if an absolute path isn't specified. This field accepts <a href="../Variables.html">Variables &amp; Expressions</a>.</dd>
+  <dt>Search</dt>
+  <dd>Opens the File Select dialog to select an Image File.</dd>
+  <dt>If found</dt>
+  <dd>Selects an action to execute when an image/pixel is found.<br/>
+To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.</dd>
+  <dt>If not found / Error</dt>
+  <dd>Selects an action to execute when an image/pixel is not found or if the command finds an error.<br/>
+To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Not Found' option in the If Statements window.</dd>
+  <dt>Add "If Statement"</dt>
+  <dd>Automatically adds an <em>If Image/Pixel Found</em> statement below the command. You may select a range of rows to be wrapped by the statement block.</dd>
+  <dt>Preview</dt>
+  <dd>Previews the selected image.<br/>
+Double-Click an image to open the file with the associated application.</dd>
+  <dt>Variables</dt>
+  <dd>Names of the Output variables where to store the X and Y coordinates when found.</dd>
+  <dt>Adjust coordinates to the center of the image</dt>
+  <dd>Check this option to automatically correct the coordinates in the output variables to the center of the image, instead of the upper-left corner.</dd>
+  <dt>Coord</dt>
+  <dd>Sets coordinate mode for the search to be relative to either the active window or the screen.</dd>
+  <dt>Variations</dt>
+  <dd>Specify for n a number between 0 and 255 (inclusive) to indicate the allowed number of shades of variation in either direction for the intensity of the red, green, and blue components of each pixel's color.</dd>
+  <dt>Icon</dt>
+  <dd>Specify for n a number between 0 and 255 (inclusive) to indicate the allowed number of shades of variation in either direction for the intensity of the red, green, and blue components of each pixel's color.</dd>
+  <dt>Transparent</dt>
+  <dd>Specify one color within the image that will match any color on the screen.</dd>
+  <dt>Scale</dt>
+  <dd>Width and height to which to scale the image (this width and height also determines which icon to load from a multi-icon .ICO file).</dd>
+  <dt>Repeat until</dt>
+  <dd>Loops the command until the image is found or not found, according to the option selected.<br/>
+When this option is checked you can use the Repeat counter to define the maximum number of times to search. If Repeat is 1, it will loop indefinitely until the image is found/not found or the user stops execution. And if it's a number higher than 1 or a variable, it will loop until the image is found/not found but no more than that number.</dd>
+</dl>
+<h3>Remarks</h3>
+<p>You may use the variables %FoundX% and %FoundY% (or the ones defined by you) in other commands like Mouse Move &amp; Click when the image/pixel is found. To save the values to a different variable or increment the values, use the <a href="Commands\../Variables.html">Variables</a> window.</p>
+<h3 id="related">Related</h3>
+<p><a href="http://autohotkey.com/docs/commands/ImageSearch.htm" target="_blank">ImageSearch</a></p>
+<h2 id="make-screenshot-tool-instructions">Make Screenshot Tool Instructions</h2>
+<h3 id="make-screenshot">Make Screenshot</h3>
+<ul>
+<li>Click and hold the Draw Button (button can be changed in options) and drag to create a rectangle of the area.</li>
+<li>Release (or press Enter if set in options) to make the screenshot.</li>
+</ul>
+<h3 id="make-screenshot-of-a-control">Make Screenshot of a Control</h3>
+<ul>
+<li>Point the mouse to the control area (the control's name should be showing in the tooltip).</li>
+<li>Click and release the button without moving.</li>
+</ul>
+<h3 id="make-screenshot-of-window">Make Screenshot of Window</h3>
+<ul>
+<li>Point the mouse to an area where no control name is shown.</li>
+<li>Click and release the button without moving.</li>
+</ul>
+<h3 id="adjust-the-area-of-the-screenshot">Adjust the area of the Screenshot</h3>
+<ul>
+<li>Go to <em>Settings</em> &gt; <em>Screenshots</em> (you can use the <em>Options</em> button in the <em>Image/Pixel Search</em> command window) and check the option <em>Press Enter to capture</em>.</li>
+<li>Follow on of the instructions above. Now when you draw a rectangle it will remain visible in the screen until you press Enter.</li>
+<li>Use the hotkeys <strong>Ctrl + Arrow keys</strong> to move the selection area and <strong>Shift + Arrow keys</strong> to resize it.</li>
+</ul>
+<h3 id="set-region-to-the-same-area-of-the-screenshot">Set Region to the same area of the Screenshot</h3>
+<ul>
+<li>Hold the Alt key in the keyboard right before releasing the mouse button, or pressing Enter, to automatically set the Region area to the same as the area of the screenshot taken.</li>
+</ul>
+
+</body>
+</html>

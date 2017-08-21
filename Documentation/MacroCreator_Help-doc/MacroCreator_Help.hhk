@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<BODY>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Pulover's Macro Creator">
+		<param name="Local" value="index.html">
+		</OBJECT>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Quick Tutorial &amp; Examples">
+		<param name="Local" value="Tutorial.html">
+		</OBJECT>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="FAQ - Frequently Asked Questions">
+		<param name="Local" value="Faq.html">
+		</OBJECT>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Main Window">
+		<param name="Local" value="Main.html">
+		</OBJECT>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Record">
+		<param name="Local" value="Record.html">
+		</OBJECT>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Playback">
+		<param name="Local" value="Playback.html">
+		</OBJECT>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Command Windows">
+		<param name="Local" value="Commands.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Break">
+			<param name="Local" value="Commands\Break.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Continue">
+			<param name="Local" value="Commands\Continue.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Control">
+			<param name="Local" value="Commands\Control.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Download Files">
+			<param name="Local" value="Commands\Download_Files.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Else">
+			<param name="Local" value="Commands\Else.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Expression">
+			<param name="Local" value="Commands\Expression.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="For Loop">
+			<param name="Local" value="Commands\For_Loop.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Functions">
+			<param name="Local" value="Commands\Functions.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Goto and Gosub">
+			<param name="Local" value="Commands\Goto_and_Gosub.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="If Statements">
+			<param name="Local" value="Commands\If_Statements.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Image Search">
+			<param name="Local" value="Commands\Image_Search.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Internet Explorer">
+			<param name="Local" value="Commands\Internet_Explorer.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="KeyWait">
+			<param name="Local" value="Commands\KeyWait.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Label">
+			<param name="Local" value="Commands\Label.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Loop">
+			<param name="Local" value="Commands\Loop.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Loop FilePattern">
+			<param name="Local" value="Commands\Loop_FilePattern.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Loop Parse">
+			<param name="Local" value="Commands\Loop_Parse.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Loop Read">
+			<param name="Local" value="Commands\Loop_Read.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Loop Registry">
+			<param name="Local" value="Commands\Loop_Registry.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Message Box">
+			<param name="Local" value="Commands\Message_Box.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Mouse">
+			<param name="Local" value="Commands\Mouse.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Pause">
+			<param name="Local" value="Commands\Pause.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Pixel Search">
+			<param name="Local" value="Commands\Pixel_Search.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="PostMessage and SendMessage">
+			<param name="Local" value="Commands\PostMessage_and_SendMessage.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Return">
+			<param name="Local" value="Commands\Return.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Run">
+			<param name="Local" value="Commands\Run.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Send Email">
+			<param name="Local" value="Commands\Send_Email.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Set Timer">
+			<param name="Local" value="Commands\Set_Timer.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Text">
+			<param name="Local" value="Commands\Text.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Until">
+			<param name="Local" value="Commands\Until.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Variables">
+			<param name="Local" value="Commands\Variables.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="While Loop">
+			<param name="Local" value="Commands\While_Loop.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Window">
+			<param name="Local" value="Commands\Window.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Zip Files">
+			<param name="Local" value="Commands\Zip_Files.html">
+			</OBJECT>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Variables &amp; Arrays/Objects">
+		<param name="Local" value="Variables.html">
+		</OBJECT>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Functions">
+		<param name="Local" value="Functions.html">
+		</OBJECT>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Export Window">
+		<param name="Local" value="Export.html">
+		</OBJECT>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Preview Window">
+		<param name="Local" value="Preview.html">
+		</OBJECT>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Settings">
+		<param name="Local" value="Settings.html">
+		</OBJECT>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="About &amp; Changes">
+		<param name="Local" value="About.html">
+		</OBJECT>
+</UL>
+</BODY></HTML>

@@ -1,0 +1,107 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Playback</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1 id="playback">Playback</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#hotkeys">Hotkeys</a></li>
+<li><a href="#controls-toolbar">Controls Toolbar</a></li>
+<li><a href="#context-sensitive-hotkeys">Context Sensitive Hotkeys</a></li>
+<li><a href="#playback-options">Playback Options</a></li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>To activate the Playback Hotkeys you have to press the Play Button (unless the <em>Always Active</em> option is on, which will activate all hotkeys when the program window is not active). <strong>Playback will not start immediately after pressing the Play Button, it will start when you press one of the Active Hotkeys</strong>. This behavior is intended to allow the user to select the desired starting window/control/mouse position before start playing.<br/>
+You can also activate Playback Hotkeys by double-clicking the TrayIcon or right-clicking on it and selecting <em>Play</em>.<br/>
+Unchecked rows will be ignored during playback.
+The <em>Play Current Macro</em> button will run the active Macro immediately without activating Hotkeys.</p>
+<h2 id="hotkeys">Hotkeys</h2>
+<p>Hotkeys are sometimes referred to as shortcut keys and are used to run/play the macros. Playback Hotkeys are set in the hotkey toolbars in the main window.</p>
+<p>Use <code>Backspace</code> to clear the hotkeys. Press it twice to set <code>Backspace</code> as the hotkey.</p>
+<h3 id="play">Play</h3>
+<p>Selects the Automatic Hotkey to execute the currently selected Macro.<br/>
+You can make combinations with modifiers such as <code>Ctrl + X</code>.</p>
+<p><strong>Windows Key</strong>: To make combination with the Windows key, check the option <em>Add the Windows key to &quot;Play&quot; hotkey</em> in the Options menu or in the Options toolbar.</p>
+<p><strong>Joystick Buttons</strong>: To use a Joystick button as the Play Hotkey, check the option <em>Use a joystick button as hotkey</em> in the Options menu or in the Options toolbar.</p>
+<h3 id="manual">Manual</h3>
+<p>Selects the Manual Hotkey to execute the currently selected Macro step-by-step. This is usually used to debug the Macro. If Show Info option is on a tooltip show the last and next steps will be shown next to the mouse pointer. This hotkey cannot be a combination with modifiers.</p>
+<h3 id="stop">Stop</h3>
+<p>Selects the Hotkey to stop execution and return it to start. You can also stop Playback by double-clicking the TrayIcon or right-clicking on it and selecting <em>Stop</em>. You can make combinations with modifiers such as <code>Ctrl + X</code>.</p>
+<h3 id="pause">Pause</h3>
+<p>Selects the Hotkey to pause execution. Press the hotkey again to resume playback. You can also pause/unpause Playback by Middle-Clicking the TrayIcon. You can make combinations with modifiers such as <code>Ctrl + X</code>.</p>
+<h2 id="controls-toolbar">Controls Toolbar</h2>
+<p>This small window allows you to control Playback and Recording using an interface in addition to the Hotkeys. It will be displayed when the <em>Playback</em> or <em>Record</em> button is pressed and the <em>Show Controls</em> option is checked or you can open it manually from the Macro Menu, Tray Menu and pressing Ctrl+B on the main window.</p>
+<h3 id="multiple-macros">Multiple Macros</h3>
+<p>Macro Creator supports multiple Macros / Hotkeys. Each Macro will have its own Auto and Manual Hotkey that are shown when you add/select a Macro tab.</p>
+<p>When you press the Play Button (or when the main window is not active if &quot;Always Active&quot; option is on) all valid Hotkeys will be activated for all non-empty Macros. A traytip will be displayed (if <em>Show Info</em> is on) showing how many Play Hotkeys were activated. If any duplicate is found NO Hotkey will be activated.</p>
+<h3 id="debugging-macros">Debugging Macros</h3>
+<p>In addition to the Manual Hotkey you can select one of these options from the Macro menu:</p>
+<h3 id="play-from-selected-row">Play From Selected Row</h3>
+<p>If checked Playback will run each Macro from the first selected row in its list. Valid for all Playback commands.</p>
+<h3 id="play-until-selected-row">Play Until Selected Row</h3>
+<p>If checked Playback will stop each Macro when the first selected row in its list is reached. Valid for all Playback commands.</p>
+<h3 id="play-selected-rows">Play Selected Rows</h3>
+<p>If checked Playback will only execute selected rows in each Macro. Valid for all Playback commands.</p>
+<p>You can also view the list of variables and contents from the File menu and Tray Icon menu.</p>
+<h2 id="context-sensitive-hotkeys">Context Sensitive Hotkeys</h2>
+<p>Makes all Hotkeys context-sensitive. Such hotkeys will only work depending on the type of window that is active or exists, or if an <a href="Variables.html#expressions">expression</a> is evaluated to true.</p>
+<p>Select the type of condition and enter the identification of the window, or use the &quot;Get Window&quot; button to retrieve it.</p>
+<p>For the <em>#If Expression</em> option you can provide any valid <a href="Variables.html#expressions">expression</a>.</p>
+<pre class="NoIndent">#If MyVar <em>; Hotkeys will only work when MyVar evaluates to True</em>
+#If GetKeyState(&quot;ScrollLock&quot;, &quot;T&quot;) <em>; Hotkeys will only work when the ScrollLock key is on</em>
+#If Var1 = &quot;A&quot; || Var1 = &quot;B&quot;</pre>
+<p>For an expression to be <code>true</code> it must be a number other than 0 or a non-empty string.</p>
+<p>You can also use <a href="Functions.html#user-defined-functions">User-defined functions</a> with the <em>#If Expression</em> option.</p>
+<p>This option affects ALL Hotkeys and will be saved to the programs settings when it's closed. There's a text tip at the bottom-right of the main window to show if it's active. To deactivate this option select <em>None</em> in the list.</p>
+<p>For more information see AutoHotkey documentation: <a href="http://autohotkey.com/docs/commands/_IfWinActive.htm" target="_blank">#IfWinActive</a> and <a href="http://autohotkey.com/docs/commands/_If.htm" target="_blank">#If</a>.</p>
+<h2 id="playback-options">Playback Options</h2>
+<p>To change options click the Options button on the main window or select Options Menu &gt; Settings. Some of the options can also be accessible from the <em>Playback Options</em> button on the <a href="#controls-toolbar">Controls Toolbar</a>.</p>
+<h3 id="title-match-mode">Title Match Mode</h3>
+<p>Sets the matching behavior of the WinTitle parameter in commands such as WinWait.</p>
+<p><strong>1</strong>: A window's title must start with the specified WinTitle to be a match.<br/>
+<strong>2</strong>: A window's title can contain WinTitle anywhere inside it to be a match.<br/>
+<strong>3</strong>: A window's title must exactly match WinTitle to be a match.<br/>
+<strong>RegEx</strong>: Changes WinTitle, WinText, ExcludeTitle, and ExcludeText to be regular expressions. Do not enclose such expressions in quotes when using them with commands. For example: WinActivate Untitled.*Notepad. RegEx also applies to ahk_class.</p>
+<p><strong>Fast</strong>: This is the default behavior. Performance may be substantially better than Slow, but certain WinText elements for some types of windows may not be &quot;seen&quot; by the various window commands.<br/>
+<strong>Slow</strong>: Can be much slower, but all possible WinText is retrieved from every window as a windowing command searches through them for a match. Window Spy reveals which parts of a Window's text (if any) require the slow mode.</p>
+<p>For more information see <a href="http://autohotkey.com/docs/commands/SetTitleMatchMode.htm" target="_blank">AutoHotkey documentation</a>.</p>
+<h3 id="detect-hidden-windows">Detect Hidden Windows</h3>
+<p>Determines whether invisible windows are &quot;seen&quot; by the program.</p>
+<p>For more information see <a href="http://autohotkey.com/docs/commands/DetectHiddenWindows.htm" target="_blank">AutoHotkey documentation</a>.</p>
+<h3 id="detect-hidden-text">Detect Hidden Text</h3>
+<p>Determines whether invisible text in a window is &quot;seen&quot; for the purpose of finding the window. This affects commands such as IfWinExist and WinActivate.</p>
+<p>For more information see <a href="http://autohotkey.com/docs/commands/DetectHiddenText.htm" target="_blank">AutoHotkey documentation</a>.</p>
+<h3 id="key-send-mode">Key send mode</h3>
+<p>Sets the default method for Keyboard and Mouse actions. You can change this mid-run using the <code>SendMode</code> command available in the <a href="Commands/Run.html">Run command window</a> (this will not change the default setting).</p>
+<p>For more information see <a href="http://autohotkey.com/docs/commands/SendMode.htm" target="_blank">AutoHotkey documentation</a>.</p>
+<h3 id="key-delay">Key delay</h3>
+<p>Sets the delay that will occur after each keystroke sent by Send and ControlSend. You can change this mid-run using the <code>SetKeyDelay</code> command available in the <a href="Commands/Run.html">Run command window</a> (this will not change the default setting).</p>
+<p>For more information see <a href="http://autohotkey.com/docs/commands/SetKeyDelay.htm" target="_blank">AutoHotkey documentation</a>.</p>
+<h3 id="mouse-delay">Mouse delay</h3>
+<p>Sets the delay that will occur after each mouse movement or click. You can change this mid-run using the <code>SetMouseDelay</code> command available in the <a href="Commands/Run.html">Run command window</a> (this will not change the default setting).</p>
+<p>For more information see <a href="http://autohotkey.com/docs/commands/SetMouseDelay.htm" target="_blank">AutoHotkey documentation</a>.</p>
+<h3 id="control-delay">Control delay</h3>
+<p>Sets the delay that will occur after each control-modifying command. You can change this mid-run using the <code>SetControlDelay</code> command available in the <a href="Commands/Run.html">Run command window</a> (this will not change the default setting).</p>
+<p>For more information see <a href="http://autohotkey.com/docs/commands/SetControlDelay.htm" target="_blank">AutoHotkey documentation</a>.</p>
+<h3 id="playback-speed-hotkeys">Playback Speed Hotkeys</h3>
+<p><strong>Speed Up</strong>: Selects the hotkey to toggle playback speed Up/Normal. When this function is activated, delay values will be cut by value set. Does not work when <em>Random Sleeps</em> is activated.</p>
+<p><strong>Slow Down</strong>: Selects the hotkey to toggle playback speed Down/Normal. When this function is activated, delay values will be multiplied by value set. Does not work when <em>Random Sleeps</em> is activated.</p>
+<h3 id="display-balloon-tips">Display balloon tips</h3>
+<p>Enables displaying of tooltips and traytips during Recording/Playback.</p>
+<h3 id="do-not-display-errors">Do not display errors</h3>
+<p>Hides error messages from commands, assignments, functions and expressions.</p>
+<h3 id="return-mouse-after-playback">Return Mouse after playback</h3>
+<p>If checked will return the mouse to the initial position after each Macro Playback that uses mouse movement. This will not work for Manual Playback.</p>
+<h3 id="auto-hide-controls-toolbar">Auto Hide Controls Toolbar</h3>
+<p>If checked the Controls Toolbar will be automatically shown when a Playback hotkey is pressed and hidden when execution finishes.</p>
+<h3 id="random-sleeps">Random Sleeps</h3>
+<p>If checked all delays during playback will be a random value for more or less of the defined percentage, e.g.: if percentage is set to 50, a command with a delay of 300ms will be set to any value between 150ms and 450ms. Percentage can be set in the counter.</p>
+</body>
+</html>

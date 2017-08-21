@@ -1,0 +1,129 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Settings</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1 id="settings">Settings</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#general">General</a></li>
+<li><a href="#recording">Recording</a></li>
+<li><a href="#playback">Playback</a></li>
+<li><a href="#defaults">Defaults</a></li>
+<li><a href="#screenshots">Screenshots</a></li>
+<li><a href="#email-accounts">Email accounts</a></li>
+<li><a href="#language">Language</a></li>
+<li><a href="#language-editor">Language Editor</a></li>
+<li><a href="#user-global-variables">User Global Variables</a></li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>All settings are saved to <em>MacroCreator.ini</em>, User Global Variables are saved to <em>UserGlobalVars.ini</em> and Email accounts are saved to <em>UserEmailAccounts.ini</em>. Those files are located inside <em>AppData\MacroCreator</em> by default. To make <strong>Macro Creator</strong> portable you can copy those files to the same directory of <em>MacroCreator.exe</em> and it will use its own folder instead of AppData.</p>
+<h2 id="general">General</h2>
+<h3 id="create-backups-automatically">Create backups automatically</h3>
+<p>If enabled the program will automatically create a backup file of the active project everytime the a change is made to one of the Macro Lists.</p>
+<h3 id="display-controls-bar-on-start-up">Display Controls Bar on start-up</h3>
+<p>If checked will display the Controls bar upon every start.</p>
+<h3 id="allow-multiple-instances">Allow Multiple Instances</h3>
+<p>Determines whether Macro Creator is allowed to run concurrent instances.</p>
+<h3 id="remove-theme-from-toolbars">Remove Theme from Toolbars</h3>
+<p>Removes the current theme colors from the main window toolbars (you must restart the application to apply the changes).</p>
+<h3 id="use-expression-by-default-for-variables-assignment">Use Expression by default for Variables Assignment</h3>
+<p>Determines whether the <em>Expression</em> option will be enabled by default for new Variable Assignments.</p>
+<h3 id="display-confirmation-when-closing-a-macro">Display confirmation when closing a macro</h3>
+<p>Enables / Disables prompt before closing a macro.</p>
+<h3 id="action-of-main-windows-close-button">Action of main window's close button</h3>
+<p>Determines whether to close the application or minimize it to tray when the close button on the title bar is clicked or Alt+F4 is pressed.</p>
+<h3 id="hightlight-loops-and-statements">Hightlight Loops and Statements</h3>
+<p>Click on the <strong>Index</strong> Column Header or use the <em>View menu</em> to turn this option On/Off.<br/>
+When activated, rows inside Loops and text of rows inside Statements will be shown in colors. Also <code>&gt;</code> and <code>*</code> will be placed in front of command's index as representation to help visualize which rows are nested.<br/>
+<code>&gt;</code> represents Loops and <code>*</code> represents If Statements, so for example <code><em>N</em> *&gt;*&gt;</code> is equivalent to:<br/></p>
+<pre class="NoIndent">[If]
+{
+    [Loop]
+    {
+        [If]
+        {
+            [Loop]
+            {
+                [...]
+            }
+        }
+    }
+}</pre>
+<p>You can change the default colors clicking on the color shown here and picking a new one from the selector.<br/></p>
+<h3 id="show-indentation-for-loops-and-statements">Show Indentation for Loops and Statements</h3>
+<p>When activated Actions inside Loops or Statements will be shown with indentation.<br/>
+You can also double-click on the <em>Action</em> Column Header to turn this option On/Off.<br/></p>
+<h3 id="virtual-keys">Virtual Keys</h3>
+<p>System keys and Modifiers that will be recognized during Recording and when Capture keys is enabled. If your keyboard layout has a key that is not being captured, press it once and click the <em>Key History</em> button to see its VK and SC codes. You can add them to the list as <code>{VKnn}</code>, <code>{SCnn}</code> or <code>{VKnnSCnn}</code>.</p>
+<h2 id="recording">Recording</h2>
+<p>See <a href="Record.html#recording-options">Record Page</a>.</p>
+<h2 id="playback">Playback</h2>
+<p>See <a href="Playback.html#playback-options">Playback Page</a>.</p>
+<h2 id="defaults">Defaults</h2>
+<h3 id="mouse-coordinates">Mouse Coordinates</h3>
+<p>Sets <a href="http://autohotkey.com/docs/commands/CoordMode.htm" target="_blank">coordinate mode</a> for Mouse commands and records to be relative to either the active window, screen or client area. This option is global and will affect both Recording and Playback so it should be set before adding any commands for the project.<br/>
+<em>Note</em>: This setting will be saved to the PMC file.</p>
+<h3 id="default-mouse-delay">Default Mouse Delay</h3>
+<p>Sets the default delay added for each new Mouse Command. This affects new commands added from the Mouse Command window and will only affect the recorder if 'Timed Intervals' is disabled.</p>
+<h3 id="default-window-delay">Default Window Delay</h3>
+<p>Sets the default delay added for each new Window (Set) Command. This affects new commands added from the Window Command window and the recorder.</p>
+<h3 id="max-history-per-macro">Max History per Macro</h3>
+<p>Sets the maximum History steps to keep for each macro. Changing this might have little impact in performance. It's recommended to restart Macro Creator after changing this setting.</p>
+<h3 id="clear-history">Clear History</h3>
+<p>Clears and resets History for all Macros.</p>
+<h3 id="default-script-editor">Default Script Editor</h3>
+<p>Sets a default editor to open Script with the <em>Edit Script</em> button in the <strong>Preview</strong> window.</p>
+<h3 id="default-macro-file">Default Macro File</h3>
+<p>If a valid file with a PMC code is set it will be loaded on program start up.</p>
+<h3 id="standard-library-file">Standard Library File</h3>
+<p>Sets an AutoHotkey script file to be loaded automatically in the <em>Functions</em> window to be used as <a href="Functions.html#run-function-from-external-ahk-file">External File Function</a>.</p>
+<h2 id="screenshots">Screenshots</h2>
+<h3 id="draw-button">Draw Button</h3>
+<p>Selects the Draw Button to be used for Screenshots tool and Get Area in Image Search.</p>
+<h3 id="line-width-px">Line Width (Px)</h3>
+<p>Defines the pixel width of the rectangle when using the Image/Pixel Search are and Screenshots tool.</p>
+<h3 id="color">Color</h3>
+<p>Selects the color of the rectangle used to define Image/Pixel Search area and Screenshots.</p>
+<h3 id="capture-on-release">Capture on release</h3>
+<p>Captures Screenshots when the Draw button is released.</p>
+<h3 id="press-enter-to-capture">Press Enter to capture</h3>
+<p>Waits for the user to press Enter to confirm the rectangle area of the Screenshot. Enabling this option allows you to adjust the search/capture area using hotkeys (<strong>Ctrl + Arrow keys</strong> to move the selection area and <strong>Shift + Arrow keys</strong> to resize it).</p>
+<h3 id="screenshots-directory">Screenshots Directory</h3>
+<p>Selects the default folder for Screenshots taken.</p>
+<h2 id="email-accounts">Email accounts</h2>
+<p>Here you can add and test email accounts to be used with the <em>Send Email</em> feature. The information will be saved to the file <em>UserEmailAccounts.ini</em> in AppData folder, or the application folder in Portable Mode. The fields are standard email client fields so they won't be detailed here.</p>
+<p>You can add, edit, remove and reorder the accounts here, as well as send a test message.</p>
+<h3 id="remarks">Remarks</h3>
+<p>Accounts informations are saved to <em>UserEmailAccounts.ini</em> located at %AppData%\MacroCreator or at the application folder when in Portable mode.</p>
+<p>To use a Gmail account it's necessary to activate allow <a href="https://www.google.com/settings/security/lesssecureapps" target="_blank">&quot;Less secure apps access&quot;</a>.</p>
+<p><strong>Warning</strong>: Scripts exported (even if compiled) with the send email function (CDO) will have visible informations of email accounts used, including the <strong>password</strong>. The PMC project file does not have this information.</p>
+<h2 id="language">Language</h2>
+<p>Here you can choose the interface language.</p>
+<h2 id="language-editor">Language Editor</h2>
+<p>Here you can make corrections to the translations (or even create a new one) and submit your revisions.<br/>
+A new version of the language files may be released at any time independent of application releases, so feel free to submit any number of corrections as many times as you want. Credits will be given on the <a href="http://www.macrocreator.com/project" target="_blank">official website</a>. If don't wish to be credited, just say it in the message.</p>
+<h2 id="user-global-variables">User Global Variables</h2>
+<p>Here you can define global variables that will be available during Playback. They may be used as constants so you can always call them from inside a command.<br/></p>
+<p>The variables defined here will always be available inside <a href="Functions.html#user-defined-functions">User-Defined Functions</a>, even when scope is Local.</p>
+<p>User defined variables are saved to an INI file in the AppData\MacroCreator folder (it can also be edited in external text editors).</p>
+<p>Format is the same used for non-expression assignments in AutoHotkey or the one found in standard INI files.<br/></p>
+<p>They can also be included in exported scripts by checking <em>Global Variables</em> option in the <a href="Export.html">Export Window</a>.<br/></p>
+<p>You can separate your variables in groups using INI format Sections with title enclosed in brocks. Use the button in the Export Window to select which Variables or Sections will be exported.<br/></p>
+<p>Example of <em>User Global Variables</em> list:</p>
+<pre class="NoIndent">[Section1]
+aVar1 = Value1
+aVar2 = Value3
+aVar3 = Value2
+[Section2]
+bVar1 = Value1
+bVar2 = Value3
+bVar3 = Value2</pre>
+</body>
+</html>
