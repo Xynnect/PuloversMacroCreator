@@ -1,7 +1,6 @@
 ﻿; *****************************
 ; :: PULOVER'S MACRO CREATOR ::
 ; *****************************
-;test
 ; "The Complete Automation Tool"
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: http://www.macrocreator.com
