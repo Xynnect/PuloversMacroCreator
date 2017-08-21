@@ -11166,14 +11166,6 @@ GuiControl, chMacro:Choose, A_List, %OSHK%
 GoSub, TabSel
 return
 
-^F5::
-Gosub, OSPlay
-return
-
-^F6::
-MsgBox, f
-return
-
 OSPlay:
 ; MsgBox, k
 GoSub, OSHK
@@ -11213,6 +11205,14 @@ Else
 	Pause,, 1
 	IsPauseCheck := true
 }
+return
+
+F5::
+Gosub, OSPlay
+return
+
+^F6::
+MsgBox, f
 return
 
 OSStop:
