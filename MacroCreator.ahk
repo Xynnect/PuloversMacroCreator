@@ -11166,7 +11166,12 @@ GuiControl, chMacro:Choose, A_List, %OSHK%
 GoSub, TabSel
 return
 
+^F5::
+Gosub, OSPlay
+return
+
 OSPlay:
+; MsgBox, k
 GoSub, OSHK
 GoSub, b_Enable
 If (ListCount%OSHK% = 0)
